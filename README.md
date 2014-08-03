@@ -1,43 +1,48 @@
 MPNSClient
 ==========
 
-Client for Microsoft Push Notification Service (MPNS)
+Client for Microsoft Push Notification Service (MPNS) on PHP
 
-Toast notification
+Toast notification example
 -------
 
-    // Initialize toast notification instance 
-    $Message = new \MPNS\ToastMessage();
+    use alxmsl\MPNS\Client;
+    use alxmsl\MPNS\Message\ToastMessage;
+
+    $Message = new ToastMessage();
     $Message->setTitle('text1')
         ->setContent('text2')
         ->setParam('aaa')
         ->setSound('sound')
         ->setIsSilent(true);
 
-    // Create client and send notification for channel 
     $channelUrl = 'http://sn1.notify.live.net/throttledthirdparty/01.00/ASDWEWRWEDFDFDfdfdfdfFE3feeD444343';
-    $Client = new \MPNS\Client();
+    $Client = new Client();
     $Client->send($channelUrl, $Message);
 
-Tile notification
+Tile notification example
 -------
 
-    // Initialize tile notification instance 
-    $Message = new \MPNS\TileMessage();
+    use alxmsl\MPNS\Client;
+    use alxmsl\MPNS\Message\TileMessage;
 
-    // Create client and send notification for channel 
+    $Message = new TileMessage();
+    //@todo: here you can initialize tile fileds use TileMessage setters
+
     $channelUrl = 'http://sn1.notify.live.net/throttledthirdparty/01.00/ASDWEWRWEDFDFDfdfdfdfFE3feeD444343';
-    $Client = new \MPNS\Client();
+    $Client = new Client();
     $Client->send($channelUrl, $Message);
 
-Raw tile notification
+Raw tile notification example
 -------
 
-    // Initialize custom fields of raw tile notification instance
-    $Message = new \MPNS\RawTileMessage();
+    use alxmsl\MPNS\Client;
+    use alxmsl\MPNS\Message\RawTileMessage;
+
+    $Message = new RawTileMessage();
+    // Here is raw fields initialization
     $Message->aaa = 'bbb';
 
-    // Create client and send notification for channel 
     $channelUrl = 'http://sn1.notify.live.net/throttledthirdparty/01.00/ASDWEWRWEDFDFDfdfdfdfFE3feeD444343';
-    $Client = new \MPNS\Client();
+    $Client = new Client();
     $Client->send($channelUrl, $Message);
