@@ -17,10 +17,11 @@ final class Autoloader {
     private static $classes = array(
         'alxmsl\\MPNS\\Autoloader'      => 'Autoloader.php',
         'alxmsl\\MPNS\\Client'          => 'Client.php',
-        'alxmsl\\MPNS\\AbstractMessage' => 'AbstractMessage.php',
-        'alxmsl\\MPNS\\ToastMessage'    => 'ToastMessage.php',
-        'alxmsl\\MPNS\\TileMessage'     => 'TileMessage.php',
-        'alxmsl\\MPNS\\RawTileMessage'  => 'RawTileMessage.php',
+
+        'alxmsl\\MPNS\\Message\\AbstractMessage' => 'AbstractMessage.php',
+        'alxmsl\\MPNS\\Message\\ToastMessage'    => 'ToastMessage.php',
+        'alxmsl\\MPNS\\Message\\TileMessage'     => 'TileMessage.php',
+        'alxmsl\\MPNS\\Message\\RawTileMessage'  => 'RawTileMessage.php',
     );
 
     /**
