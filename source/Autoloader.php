@@ -22,8 +22,8 @@ final class Autoloader {
      * @var array array of available classes
      */
     private static $classes = array(
-        'alxmsl\\MPNS\\Autoloader'      => 'Autoloader.php',
-        'alxmsl\\MPNS\\Client'          => 'Client.php',
+        'alxmsl\\MPNS\\Autoloader' => 'Autoloader.php',
+        'alxmsl\\MPNS\\Client'     => 'Client.php',
 
         'alxmsl\\MPNS\\Message\\AbstractMessage' => 'AbstractMessage.php',
         'alxmsl\\MPNS\\Message\\ToastMessage'    => 'ToastMessage.php',

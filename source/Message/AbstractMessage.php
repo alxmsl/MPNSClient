@@ -7,7 +7,8 @@
  * http://www.wtfpl.net/ for more details.
  */
 
-namespace alxmsl\MPNS;
+namespace alxmsl\MPNS\Message;
+use DOMDocument;
 
 /**
  * Abstract MPNS notification class
@@ -128,7 +129,7 @@ abstract class AbstractMessage {
 
     /**
      * Payload generator
-     * @return \DOMDocument notification payload
+     * @return DOMDocument notification payload
      */
     abstract public function getPayload();
 

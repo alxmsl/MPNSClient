@@ -12,9 +12,12 @@
  */
 
 include '../source/Autoloader.php';
-include '../lib/Network/source/Autoloader.php';
+include '../vendor/alxmsl/network/source/Autoloader.php';
 
-$Message = new \MPNS\ToastMessage();
+use alxmsl\MPNS\Client;
+use alxmsl\MPNS\Message\ToastMessage;
+
+$Message = new ToastMessage();
 $Message->setTitle('text1')
     ->setContent('text2')
     ->setParam('aaa')
@@ -22,5 +25,5 @@ $Message->setTitle('text1')
     ->setIsSilent(true);
 
 $channelUrl = 'http://sn1.notify.live.net/throttledthirdparty/01.00/ASDWEWRWEDFDFDfdfdfdfFE3feeD444343';
-$Client = new \MPNS\Client();
+$Client = new Client();
 $Client->send($channelUrl, $Message);

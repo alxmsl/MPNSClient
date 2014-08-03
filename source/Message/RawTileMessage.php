@@ -7,7 +7,7 @@
  * http://www.wtfpl.net/ for more details.
  */
 
-namespace alxmsl\MPNS;
+namespace alxmsl\MPNS\Message;
 use DOMDocument;
 
 /**
@@ -46,7 +46,7 @@ class RawTileMessage extends AbstractMessage {
 
     /**
      * Raw tile notification payload generator
-     * @return \DOMDocument notification payload
+     * @return DOMDocument notification payload
      */
     public function getPayload() {
         $Notification = new DOMDocument('1.0', 'utf-8');

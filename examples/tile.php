@@ -12,10 +12,13 @@
  */
 
 include '../source/Autoloader.php';
-include '../lib/Network/source/Autoloader.php';
+include '../vendor/alxmsl/network/source/Autoloader.php';
 
-$Message = new \MPNS\TileMessage();
+use alxmsl\MPNS\Client;
+use alxmsl\MPNS\Message\TileMessage;
+
+$Message = new TileMessage();
 
 $channelUrl = 'http://sn1.notify.live.net/throttledthirdparty/01.00/ASDWEWRWEDFDFDfdfdfdfFE3feeD444343';
-$Client = new \MPNS\Client();
+$Client = new Client();
 $Client->send($channelUrl, $Message);

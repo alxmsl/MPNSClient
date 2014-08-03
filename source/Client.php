@@ -8,6 +8,8 @@
  */
 
 namespace alxmsl\MPNS;
+use alxmsl\MPNS\Message\AbstractMessage;
+use alxmsl\Network\Http\Request;
 
 /**
  * MPNS client class
