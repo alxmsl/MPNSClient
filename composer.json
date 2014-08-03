@@ -1,0 +1,22 @@
+{
+    "name": "alxmsl/mpns",
+    "description": "Client for Microsoft Push Notification Service (MPNS)",
+    "keywords": ["microsoft", "push", "notification", "mpns"],
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "alxmsl",
+            "email": "alexey.y.maslov@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "alexey.y.maslov@gmail.com",
+        "issues": "https://github.com/alxmsl/MPNSClient/issues"
+    },
+    "autoload": {
+        "psr-4": {"alxmsl\\MPNS\\": "source/"}
+    },
+    "require":{
+        "alxmsl/network": ">=1.0.1"
+    }
+}

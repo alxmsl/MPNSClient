@@ -1,7 +1,6 @@
 <?php
 
-namespace MPNS;
-use Network\Http\Request;
+namespace alxmsl\MPNS;
 
 /**
  * MPNS client class

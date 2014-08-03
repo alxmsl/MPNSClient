@@ -1,9 +1,9 @@
 <?php
 
-namespace MPNS;
+namespace alxmsl\MPNS;
 
 // append autoloader
-spl_autoload_register(array('\MPNS\Autoloader', 'Autoloader'));
+spl_autoload_register(array('\alxmsl\MPNS\Autoloader', 'autoload'));
 
 /**
  * MPNS autoloader class
@@ -15,19 +15,19 @@ final class Autoloader {
      * @var array array of available classes
      */
     private static $classes = array(
-        'MPNS\\Autoloader'      => 'Autoloader.php',
-        'MPNS\\Client'          => 'Client.php',
-        'MPNS\\AbstractMessage' => 'AbstractMessage.php',
-        'MPNS\\ToastMessage'    => 'ToastMessage.php',
-        'MPNS\\TileMessage'     => 'TileMessage.php',
-        'MPNS\\RawTileMessage'  => 'RawTileMessage.php',
+        'alxmsl\\MPNS\\Autoloader'      => 'Autoloader.php',
+        'alxmsl\\MPNS\\Client'          => 'Client.php',
+        'alxmsl\\MPNS\\AbstractMessage' => 'AbstractMessage.php',
+        'alxmsl\\MPNS\\ToastMessage'    => 'ToastMessage.php',
+        'alxmsl\\MPNS\\TileMessage'     => 'TileMessage.php',
+        'alxmsl\\MPNS\\RawTileMessage'  => 'RawTileMessage.php',
     );
 
     /**
      * Component autoloader
      * @param string $className claass name
      */
-    public static function Autoloader($className) {
+    public static function autoload($className) {
         if (array_key_exists($className, self::$classes)) {
             $fileName = realpath(dirname(__FILE__)) . '/' . self::$classes[$className];
             if (file_exists($fileName)) {

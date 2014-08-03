@@ -1,10 +1,7 @@
 <?php
 
-namespace MPNS;
-
+namespace alxmsl\MPNS;
 use DOMDocument;
-use ReflectionClass;
-use ReflectionProperty;
 
 /**
  * Raw tile message class
